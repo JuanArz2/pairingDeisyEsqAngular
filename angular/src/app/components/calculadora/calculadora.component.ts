@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-calculadora',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './calculadora.component.css'
 })
 export class CalculadoraComponent {
+  
+  /* @Output() */ resultadoHijo: number = 0;
+  sumar(){
+    this.resultadoHijo = this.resultadoHijo + 1
+  }
+  
+  restar(){
+    this.resultadoHijo = this.resultadoHijo - 1
+  }
+
 
 }
